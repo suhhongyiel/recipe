@@ -1,0 +1,112 @@
+<section class="recipe-full-page">
+  <!-- recipe name -->
+  <div class="recipe-name-container">
+
+    <span class="recipe-name">{{CAPTION}}</span>
+  </div>
+  <!-- ingredients -->
+  <!-- adding body recipe HY-->
+  <div class="body_recipe">
+    <!-- Added Ingredients Check Listing -->
+    <span class="ingredients-title"></span>
+    <div class="recipe-ingredients-container">
+      <div class="ingredients-element">
+
+        <div id="myDIV" class="header">
+          <h2 style="margin:5px">ingredients</h2>
+          <input type="text" id="myInput" placeholder="Please insert the ingredients...">
+          <span onclick="newElement()" class="addBtn">Add</span>
+        </div>
+
+        <ul id="myUL">
+          <script>var ingredient_arr = [];</script>
+          {{#each INGREDIENTS}}
+            <script>ingredient_arr.push("{{this}}");</script>
+            <li class="ingredient_li">{{this}}</li>
+          {{/each}}
+        </ul>
+
+
+      </div>
+    </div>
+
+    <!-- recipe image -->
+    <div class="recipe-image-container">
+      <a href="#"><img src="{{IMG_URL}}"></a>
+    </div>
+    <!-- closing body recipe HY-->
+  </div>
+
+  <!-- recipe toolbar -->
+  <div class="middle_section">
+    <div class="recipe-toolbar-container">
+      <div class="recipe-navitem">
+        <span class="recipe-navbar-icon" id="bookmark-icon"><i class="fas fa-star"></i></span>
+        <span class="nav-text">Bookmark</span>
+      </div>
+      <div class="recipe-navitem">
+        <span class="recipe-navbar-icon" id="print-icon"><i class="fas fa-print"></i></span>
+        <span class="nav-text">Print</span>
+      </div>
+      <div class="recipe-navitem">
+        <span class="recipe-navbar-icon" id="copyURL-icon"><i class="far fa-copy"></i></span>
+        <span class="nav-text">CopyURL</span>
+      </div>
+      <div class="recipe-navitem">
+        <a href= "https://www.google.com/intl/us_ALL/drive/">
+          <span class="recipe-navbar-icon" id="googleDrive-icon"><i class="fab fa-google-drive"></i></span>
+          <span class="nav-text" >GoogleDrive</span>
+        </a>
+      </div>
+      <div class="recipe-navitem">
+        <a href="https://www.instagram.com/">
+          <span class="recipe-navbar-icon" id="instagram-icon"><i class="fab fa-instagram"></i></span>
+          <span class="nav-text">Instagram</span>
+        </a>
+      </div>
+      <div class="recipe-navitem">
+        <a href="https://www.facebook.com/">
+          <span class="recipe-navbar-icon" id="facebook-icon"><i class="fab fa-facebook-square"></i></span>
+          <span class="nav-text">Facebook</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- bottom section start. -->
+
+  <!-- directions -->
+  <div class="bottom_section">
+    <div class="recipe-directions-container">
+      <span class="directions-title"></span>
+
+      <div class="directions-element">
+        <div class="directions-checklist">
+
+          <!--  Direction part of input -->
+
+          <div id="direction_div" class="direction_header">
+            <h2 style="margin:5px">Directions</h2>
+            <input type="text" id="direction_Input" placeholder="Please insert the recipe direction...">
+            <span id="direction_span" onclick="direction_newElement()" class="direction_addBtn">Add</span>
+          </div>
+
+          <ul id="direction_UL">
+            <script>var direction_arr = [];</script>
+            {{#each DIRECTIONS}}
+            <script>direction_arr.push("{{this}}");</script>
+            <li class="direction_li">{{this}}</li>
+            {{/each}}
+          </ul>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<p> Created By Hongyiel Suh </p>
+<p> Created By HoJun Shin</p>
+<p> Created By KwangHuk Kim</p>
+<!-- Hidden Box will come out -->

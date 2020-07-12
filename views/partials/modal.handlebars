@@ -1,0 +1,43 @@
+<button type="button" id="add-recipe-button"><i class="fas fa-plus"></i></button>
+
+<div id="modal-add-recipe-backdrop" class="hidden"></div>
+<div id="add-recipe-modal" class="hidden">
+  <div class="modal-add-recipe-dialog">
+
+    <div class="modal-add-recipe-header">
+      <h3>Add a recipe</h3>
+      <button type="button" id="modal-add-recipe-close" class="modal-hide-button">&times;</button>
+    </div>
+
+    <div class="modal-add-recipe-body">
+
+      <div class="recipe-input-element">
+        <label for="recipe-name-input">Recipe Name</label>
+        <input type="text" id="recipe-name-input" placeholder="Recipe Name"></input>
+      </div>
+
+      <div class="recipe-input-element">
+        <label for="recipe-photo-input">Photo (URL)</label>
+        <input type="text" id="recipe-photo-input" placeholder="Drag Images or URLs here">
+      </div>
+
+      <div class="recipe-input-element">
+        <label for="recipe-categories-input">Categories</label>
+        <!--<input type="text" id="recipe-categories-input" placeholder="Categories  ex)Asian, American, Italian, etc.">-->
+        <select id="recipe-categories-input">
+          <option>Asian</option>
+          <option>American</option>
+          <option>Italian</option>
+          <option>Mexican</option>
+        </select>
+      </div>
+
+    </div>
+
+    <div class="modal-footer">
+      <button type="button" id="modal-cancel" class="modal-hide-button action-button">Cancel</button>
+      <button type="button" id="modal-add" class="action-button">Add</button>
+    </div>
+
+  </div>
+</div>

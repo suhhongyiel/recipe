@@ -1,0 +1,53 @@
+<form class="Search-Food">
+  <!-- need to make (action="/action_page.php") -->
+  <!-- <input type="text" placeholder="Search.." name="search"> -->
+  <!-- inside search box -->
+
+
+  <!-- dynamic search bar in here -->
+  <div class="searchbox">
+    <div class="header">
+      <input onkeyup="searchbox_filter()" type="text" id="value" placeholder="Find a recipe..">
+      <button type="button" id="flip" class="fas fa-bars"></button>
+
+      <!-- MOVING funiction -->
+      <script>
+        $(document).ready(function () {
+          $("#flip").click(function () {
+            $("#panel").slideToggle("slow");
+          });
+        });
+      </script>
+      <!-- DO NOT MOVE IN THE JS -->
+
+
+    </div>
+  </div>
+</form>
+
+
+<!-- Use any element to open the sidenav -->
+
+<!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+<!--Filter Search Bar-->
+<aside class="filter-container">
+  <div id="panel" class="closed">
+
+    <div class="filter-input-container">
+      <button type="button" id="bookmark-filter-button" class="fa-star far"></button>
+    </div>
+    
+    <div class="filter-input-container">
+      <div class="filter-input-element">
+        <select id="filter-categories" class="filter-input" name="filter-categories">
+          <option>Any</option>
+          <option>Asian</option>
+          <option>American</option>
+          <option>Italian</option>
+          <option>Mexican</option>
+        </select>
+      </div>
+    </div>
+
+  </div>
+</aside>
